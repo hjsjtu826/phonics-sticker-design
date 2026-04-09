@@ -1,0 +1,60 @@
+skill:
+  name: phonics_sticker_design
+  display_name: 拼音贴纸设计
+  description: 创建可爱的教育拼音贴纸设计，用于小红书平台
+  version: 1.0.0
+  author: AI高效办公
+  tags:
+    - 教育
+    - 拼音
+    - 贴纸
+    - 儿童
+    - 小红书
+
+inputs:
+  - name: core_word
+    type: string
+    label: 核心词汇
+    required: true
+    description: 要设计的拼音词汇
+
+  - name: target_letter
+    type: string
+    label: 首字母/目标音素
+    required: true
+    description: 目标字母或音素
+
+  - name: subject_description
+    type: string
+    label: 人物特征和动作描述
+    required: true
+    description: 用英文描述人物特征和动作
+
+  - name: main_subject
+    type: string
+    label: 主体描述
+    required: true
+    description: 用英文简述照片主体
+
+outputs:
+  - name: prompt
+    type: string
+    label: 生成提示词
+    description: 用于生成贴纸设计的完整提示词
+
+  - name: image_size
+    type: string
+    label: 图片尺寸
+    description: 推荐的图片尺寸（3:4比例）
+
+execution:
+  type: template
+  template_file: skill.json
+  parameters:
+    core_word: "{{core_word}}"
+    target_letter: "{{target_letter}}"
+    subject_description: "{{subject_description}}"
+    main_subject: "{{main_subject}}"
+
+defaults:
+  image_size: "portrait_4_3"

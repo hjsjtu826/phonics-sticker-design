@@ -1,0 +1,47 @@
+{
+  "name": "phonics_sticker_design",
+  "display_name": "拼音贴纸设计",
+  "description": "创建可爱的教育拼音贴纸设计，用于小红书平台",
+  "version": "1.0.0",
+  "author": "AI高效办公",
+  "tags": ["教育", "拼音", "贴纸", "儿童", "小红书"],
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "core_word": {
+        "type": "string",
+        "description": "核心词汇",
+        "required": true
+      },
+      "target_letter": {
+        "type": "string",
+        "description": "首字母/目标音素",
+        "required": true
+      },
+      "subject_description": {
+        "type": "string",
+        "description": "人物特征和动作描述（英文）",
+        "required": true
+      },
+      "main_subject": {
+        "type": "string",
+        "description": "主体描述（英文）",
+        "required": true
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "prompt": {
+        "type": "string",
+        "description": "生成贴纸设计的提示词"
+      },
+      "image_size": {
+        "type": "string",
+        "description": "图片尺寸"
+      }
+    }
+  },
+  "template": "Create a cute educational phonics sticker design for Xiaohongshu (Little Red Book) about the word \"{{core_word}}\". \n\n === CRITICAL STYLE REQUIREMENTS (MUST FOLLOW EXACTLY) === \n\n 【OVERALL VISUAL CONCEPT】 \n - Transform the subject into a cute, high-quality 2D children's picture book illustration. \n - High educational value: Clear, readable phonics focus. \n - Visual identity: Die-cut sticker style with a thick solid white border around the main illustration, placed on a soft solid pastel background. \n\n 【COLOR SYSTEM】 \n - Background: Soft pastel color (e.g., mint green, baby pink, or baby blue). \n - Primary colors: Bright, cheerful candy colors for the main subject. \n - Text colors: High-contrast, playful colors (like dark navy or bright orange) that pop out. \n\n 【LAYOUT & STRUCTURE】 \n - Aspect ratio: 3:4. \n - Top area: Giant, cute typography of the target letter \"{{target_letter}}\". \n - Middle area: The main character/action illustration. \n - Bottom area: The full word \"{{core_word}}\" in a bold, rounded, playful child-friendly font. \n - Keep the layout clean, focusing entirely on the character and the letters, functioning like a printable flashcard. \n\n 【GRAPHIC ELEMENTS】 \n - Use visual language such as: \n   - Thick white stroke outline around the central illustration (creating a peeling sticker effect). \n   - Floating cute elements (little stars, bubbles, or music notes). \n   - Subject details based on photo: {{subject_description}}. \n - Graphics must support the phonics word visually (the action or object must be extremely obvious). \n\n 【MODULE REQUIREMENTS】 \n - Module 1: Target Letter → Giant \"{{target_letter}}\" at the top. \n - Module 2: Illustration → \"{{main_subject}}\" in the center. \n - Module 3: Core Word → Bold word \"{{core_word}}\" at the bottom. \n - Module 4: Phonics Breakdown → Small dots or dashes under the letters of the word to show syllables (optional visual flair). \n\n 【TYPOGRAPHY STYLE】 \n - Bold, rounded, bubble-like playful fonts. \n - Letters must be perfectly spelled: {{core_word}}. \n - Extremely legible for 3-year-olds. \n\n 【WHAT TO AVOID】 \n - No realistic or creepy faces (keep it stylized and cute). \n - No messy or cluttered backgrounds. \n - No spelling errors (CRITICAL). \n - No scary or dark elements. \n\n 【CONTENT FOR THIS IMAGE】 \n Main Subject: {{main_subject}} \n Phonics Word: {{core_word}} \n Target Letter: {{target_letter}}"
+}
