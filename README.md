@@ -76,5 +76,5 @@ MIT License
 
 ## 联系方式
 
-- 作者: AI高效办公
-- 邮箱: your@email.com
+- 作者: 硅蜜
+- 邮箱: jeanhu721@gmail.com
